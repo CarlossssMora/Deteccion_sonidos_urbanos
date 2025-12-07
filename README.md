@@ -51,16 +51,43 @@ Diagrama
 
 ### 1. Crear y activar entorno virtual
 Este paso es esencial si se desea ejecutar el notebook `1_analisis.ipynb`, puesto que las bibliotecas de librosa y relacionadas funcionan de manera estable en la versión 3.11.0, la cual usted debe de contar también.
+
+```bash
 python -m venv venv311
-source venv311/bin/activate # Linux/Mac
-venv311\Scripts\activate # Windows
+```
+
+#### Activación del entorno en Linux/Mac
+```bash
+source venv311/bin/activate
+```
+
+#### Activación del entorno en Windows
+```bash
+venv311\Scripts\activate
+```
 
 ### 2. Instalar dependencias
-pip install -r requirements.txt
+Instale las dependencias **solo para el entorno venv311**
+```bash
+pip install -r requirements311.txt
+```
+
 
 ### 3. Ejecutar notebooks
-1. Abrir `1_analisis.ipynb` -> Generar espectrogramas y metadata  
-2. Abrir `2_CRNN.ipynb` -> Entrenar y evaluar el modelo 
+
+####1. Abrir `1_analisis.ipynb`
+Para ejecutar este notebook es necesario que haya creado el entorno virtual venv311, descargado y acomodado el dataset como se muestra en la sección de estructura del proyecto. Una vez hecho este ejecute el siguiente comando para tomar el entorno virtual como kernel para **solo este notebook**:
+```bash
+python -m ipykernel install --user --venv311 --display-name "Python 3.11 (Audio)"
+```
+Finalmente seleccione el kernel creado y ejecute el notebook. Con esto verá un Análisis Exploratorio de los audios y la generación de los espectrogramas de los mismos, así como un archivo csv con la metada de estos últimos.
+
+####2. Abrir `2_CRNN.ipynb`
+Para la ejecución de este notebook no es necesario utilizar el entorno virtual. Posteriormente, ejecute el siguiente comando para asegurarse de que disponga de las librerías para el proyecto:
+```bash
+pip install -r requirements.txt
+```
+Para la ejecución de este notebook puede utilizar la versión de Python que desee. Para el caso de los autores se utilizó la versión 3.13.7. Tras su ejecución se realiza el entrenamiento y evaluación del modelo
 
 ---
 
