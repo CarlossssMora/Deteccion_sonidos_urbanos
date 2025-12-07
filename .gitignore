@@ -1,0 +1,4 @@
+# --- Carpetas de datos pesados ---
+# Dataset UrbanSound y espectrogramas
+data/
+venv311/
