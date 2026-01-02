@@ -15,7 +15,9 @@ Dado que el dataset pesa aproximadamente 6 GB, puede obtenerlo y descargarlo a t
 ---
 
 ## Estructura del Proyecto
-<img width="238" height="472" alt="image" src="https://github.com/user-attachments/assets/de8d0704-53d3-4176-9cc8-22232554c6a1" />
+<p align="center">
+  <img width="336" height="481" alt="image" src="https://github.com/user-attachments/assets/35b8e067-0a9f-45aa-a3bb-0452c0028d3d" />
+</p>
 
 ---
 
@@ -43,7 +45,10 @@ La red incorpora una capa **Bidirectional LSTM** para capturar dependencias temp
 
 La arquitectura completa utilizada es la siguiente:
 
-Diagrama
+<p align="center">
+  <img width="290" height="1284" alt="image" src="https://github.com/user-attachments/assets/ea3dbe5d-a706-425e-b7a1-225d24fa1540" />
+  <img width="290" height="1284" alt="image" src="https://github.com/user-attachments/assets/c392a00d-b2fb-42b1-b265-a55b14777533" />
+</p>
 
 ---
 
@@ -88,6 +93,14 @@ Para la ejecución de este notebook no es necesario utilizar el entorno virtual.
 pip install -r requirements.txt
 ```
 Para la ejecución de este notebook puede utilizar la versión de Python que desee. Para el caso de los autores se utilizó la versión 3.13.7. Tras su ejecución se realiza el entrenamiento y evaluación del modelo
+
+### 4. Ejecutar el script principal
+Finalmente, este script contiene la interfaz del usuario, en la que se podrá realizar la selección del audio (propio del dataset) y generar la clase predicha por el modelo entrenado. Dado que para el preprocesamiento de los audios se utilizó un entorno virtual con una versión de python menor a las actuales, el progarama solo busca los espectorgramas ya generados del dataset, esto por limitaciones de tiempo.
+
+Para ejecutar el script utilizar el comando:
+```bash
+python main.py
+```
 
 ---
 
