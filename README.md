@@ -75,14 +75,14 @@ pip install -r requirements311.txt
 
 ### 3. Ejecutar notebooks
 
-####1. Abrir `1_analisis.ipynb`
+#### 1. Abrir `1_analisis.ipynb`
 Para ejecutar este notebook es necesario que haya creado el entorno virtual venv311, descargado y acomodado el dataset como se muestra en la sección de estructura del proyecto. Una vez hecho este ejecute el siguiente comando para tomar el entorno virtual como kernel para **solo este notebook**:
 ```bash
 python -m ipykernel install --user --venv311 --display-name "Python 3.11 (Audio)"
 ```
 Finalmente seleccione el kernel creado y ejecute el notebook. Con esto verá un Análisis Exploratorio de los audios y la generación de los espectrogramas de los mismos, así como un archivo csv con la metada de estos últimos.
 
-####2. Abrir `2_CRNN.ipynb`
+#### 2. Abrir `2_CRNN.ipynb`
 Para la ejecución de este notebook no es necesario utilizar el entorno virtual. Posteriormente, ejecute el siguiente comando para asegurarse de que disponga de las librerías para el proyecto:
 ```bash
 pip install -r requirements.txt
